@@ -1,25 +1,33 @@
 package metier;
 
 public class Employe {
-     String nom;
-     String prenom;
+     private String nom;
+     private String prenom;
+     private Service service;
+
+     public Employe(String nom, String prenom, Service service){
+         this.nom=nom;
+         this.prenom=prenom;
+         this.service=service;
+     }
 
 
     public void setNom(String nom){
         this.nom=nom;
     }
-
     public String getNom(){
-        return this.nom;
+        return nom;
     }
 
     public void setPrenom(String mdp){
         this.prenom=prenom;
     }
-
     public String getPrenom(){
-        return this.prenom;
+        return prenom;
     }
+
+    public void setService(Service service){ this.service=service;}
+    public Service getService(){ return service;}
 
 
 }
