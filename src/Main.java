@@ -34,4 +34,23 @@ public class Main {
             System.out.println(unEmploye.getPrenom() + " " + unEmploye.getNom() + ", Service : " + unEmploye.getService().getLibelle());
         }
     }
+
+    private static void chercherEmployeWhile(String nom, List<Employe> lesEmployes) {
+        boolean sortie = false;
+        int nbEmploye = lesEmployes.size();
+        int cpt = 0;
+        while ((cpt < nbEmploye) && (!sortie)) {
+            if (lesEmployes.get(cpt).getNom().equals(nom)) {
+                sortie = true;
+            } else {
+                cpt++;
+            }
+        }
+        if (sortie) {
+            /* A completer : cpt est l'indice de l'employé trouvé */
+            System.out.println(unEmploye.getPrenom() + " " + unEmploye.getNom() + ", Service : " + unEmploye.getService().getLibelle());
+        } else {
+            System.out.println("L'employé : " + nom + " n'existe pas !");
+        }
+    }
 }
