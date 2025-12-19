@@ -30,7 +30,7 @@ public class Main {
     }
 
     private static void parcourirListe(List<Employe> lesEmployes) {
-        for (List<Employe> mesEmployes) {
+        for (Employe unEmploye : lesEmployes) {
             System.out.println(unEmploye.getPrenom() + " " + unEmploye.getNom() + ", Service : " + unEmploye.getService().getLibelle());
         }
     }
